@@ -1,0 +1,3 @@
+Please see the [project page][0] for more information.
+
+[0]: http://rsontech.net/projects/shop
