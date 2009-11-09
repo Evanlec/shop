@@ -8,7 +8,7 @@
 #        trunk.
 #
 # CREATED:  2009-09-03 17:30
-# MODIFIED: 2009-11-05 16:38
+# MODIFIED: 2009-11-09 09:00
 
 _NAME=$(basename $0)
 _VERSION=1.0
@@ -45,8 +45,7 @@ _shop() {
         [ ${#stats} -eq 3 ] && echo -n "0"
     fi    
 
-    printf "%s %-${pad}s" "${stats[@]:0:2}"
-    echo " ${stats[@]:2}"
+    printf "%s %-${pad}s ${stats[@]:2}\n" "${stats[@]:0:2}"
 }
 
 main() {
