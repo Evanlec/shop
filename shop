@@ -8,7 +8,7 @@
 #        trunk.
 #
 # CREATED:  2009-09-03 17:30
-# MODIFIED: 2009-11-10 21:27
+# MODIFIED: 2009-11-17 11:05
 
 _NAME=$(basename $0)
 _VERSION=1.0
@@ -28,6 +28,8 @@ Options:
   -o, --octal        show octal mode instead of human readable mode 
   -t, --trunk PATH   only traverse up to PATH instead of / (root)
                        - takes precedence over --level
+  -p, --pad N        allow USER:GROUP N characters before directory name
+                       default: 17
 
   -h, --help         show this message
       --version      show version info
@@ -123,6 +125,10 @@ until [ -z "$1" ]; do
         -t|--trunk) trunk="$(readlink -f $2)"
                     shift 2
                     ;;
+
+        -p|--pad) pad="$2"
+                  shift 2
+                  ;;
 
         -h|--help) usage
                    exit
