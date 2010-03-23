@@ -2,16 +2,11 @@
 #
 # shop - Show Permissions at all levels of a given path
 #
-#        With `tree(1)` you start at a trunk and show all leaves that
-#        originate from that trunk, optionally showing permissions.
-#        `shop` starts at a leaf and shows the permissions back to a
-#        trunk.
-#
 # CREATED:  2009-09-03 17:30
-# MODIFIED: 2010-03-23 09:41
+# MODIFIED: 2010-03-23 09:43
 
 _NAME=$(basename $0)
-_VERSION=1.0
+_VERSION=1.1
 
 # DEFAULTS
 unset octal  # use text mode instead of octal mode
