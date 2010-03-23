@@ -1,8 +1,18 @@
-A tool to show permissions at every level in a path.
+shop: A tool to show permissions at every level in a path.
+==========================================================
 
-shop tries to be the compliment of tree(1).  With tree you start at a trunk and show all leaves that originate from that trunk, optionally showing permissions.  shop starts at a leaf and shows the permissions back to a trunk.
+shop is a simple bash script that tries to be the compliment of tree.  tree starts at a trunk and shows all paths that originate from that trunk, optionally showing permissions.  Conversely, shop starts at a leaf and shows the permissions back to a trunk.  This is very useful when battling permissions issues with web servers or shared directories, for instance.
+
+
+Installation:
+-------------
+
+ * Arch Linux - clone the repo and run makepkg -i in the root directory
+ * Others - Drop shop somewhere in your $PATH
+
 
 Usage:
+------
 
     Usage: shop [-L N] [-o] [-p N] [-t PATH] [PATH1..]
 
@@ -17,7 +27,9 @@ Usage:
       -h, --help              show this help message
       --version               show version info
 
+
 Example output:
+---------------
 
     ~ >>> shop /tmp/screens/S-randy
     drwxr-xr-x root:root       /
