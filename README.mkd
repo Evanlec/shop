@@ -1,3 +1,36 @@
-Please see the [project page][0] for more information.
+A tool to show permissions at every level in a path.
 
-[0]: http://rsontech.net/projects/shop
+shop tries to be the compliment of tree(1).  With tree you start at a trunk and show all leaves that originate from that trunk, optionally showing permissions.  shop starts at a leaf and shows the permissions back to a trunk.
+
+Usage:
+
+    Usage: shop [-L N] [-o] [-p N] [-t PATH] [PATH1..]
+
+    Options:
+      -L N, --level N         traverse N levels up the tree
+      -o, --octal             show octal mode instead of human readable mode
+      -p N, --pad N           allow USER:GROUP N characters before path name
+                                - default: 17 (8 character user and group)
+      -t PATH, --trunk PATH   only traverse up to PATH instead of / (root)
+                                - takes precedence over --level
+
+      -h, --help              show this help message
+      --version               show version info
+
+Example output:
+
+    ~ >>> shop /tmp/screens/S-randy
+    drwxr-xr-x root:root       /
+    drwxrwxrwt root:root       /tmp
+    drwxr-xr-x root:users      /tmp/screens
+    drwx------ randy:users     /tmp/screens/S-randy
+    ~ >>>
+
+    ~ >>> shop -L 2 -o /tmp/screens/S-randy
+    1777 root:root       /tmp
+    0755 root:users      /tmp/screens
+    0700 randy:users     /tmp/screens/S-randy
+    ~ >>>
+
+
+If you know of any alternative, please let me know.
