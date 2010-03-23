@@ -1,6 +1,6 @@
 # Contributor: Randy Morris <randy rsontech net>
 pkgname=shop
-pkgver=1.0.1
+pkgver=1.1
 pkgrel=1
 pkgdesc="Show permissions at each level of a given path."
 arch=('i686' 'x86_64')
