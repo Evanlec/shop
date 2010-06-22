@@ -8,7 +8,7 @@ url="http://rsontech.net/projects/shop"
 license=('None')
 depends=('bash')
 source=(http://github.com/rson/${pkgname}/raw/master/${pkgname})
-md5sums=('e7ea3ea3be526e9eacf8a810a6348b63')
+md5sums=('edadcc10525ed35ac79e8217051444a5')
 build() {
   cd ${srcdir}
   install -D -m755 ${pkgname} ${pkgdir}/usr/bin/${pkgname}
