@@ -32,14 +32,8 @@ EOT
 }
 
 _shop() {
-    [ $octal ] && stat_str="%a" || stat_str="%A"
-
+    [ $octal ] && stat_str="%04a" || stat_str="%A"
     stats=( $(stat -c "$stat_str %U:%G %n" "$1") )
-
-    # `stat -c "%a"` only returns a 4 digit mode when the first digit is 
-    # nonzero, yet `stat` always returns a 4 digit mode.  how annoying...
-    [ $octal ] && [ ${#stats} -eq 3 ] && echo -n "0"
-
     printf "%s %-${pad}s ${stats[@]:2}\n" "${stats[@]:0:2}"
 }
 
