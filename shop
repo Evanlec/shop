@@ -3,7 +3,7 @@
 # shop - Show Permissions at all levels of a given path
 #
 # CREATED:  2009-09-03 17:30
-# MODIFIED: 2010-03-23 09:43
+# MODIFIED: 2010-11-11 20:40
 
 _NAME=$(basename $0)
 _VERSION=1.1
